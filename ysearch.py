@@ -23,10 +23,10 @@ def main():
     # print the requested rule information
     for rule in yfile.rules:
         if rule.name == args.rule_name:
-            print(f"""Yara rule name: {yfile.rules[0].name}""")
-            print(f"""Yara rule source: {yfile.rules[0].location.file_path}""")
+            print(f"""Yara rule name: {rule.name}""")
+            print(f"""Yara rule source: {rule.location.file_path}""")
             print('Yara rule definition:')
-            print(yfile.rules[0].text)
+            print(rule.text)
 
 
 if __name__ == '__main__':
